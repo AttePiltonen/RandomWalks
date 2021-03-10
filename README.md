@@ -1,2 +1,2 @@
 # RandomWalks
-Random Walk Visualizations
+Some Random Walk Visualizations
