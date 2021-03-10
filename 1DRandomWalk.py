@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random
-#%matplotlib inline
+# %matplotlib inline
 import matplotlib.cm as cm
 
 walkers = 100 # choose the number of "walkers"
@@ -10,19 +10,19 @@ steps = 1000  # and the number of steps they will take
 x = np.zeros(walkers)
 y=np.zeros(walkers)
 
-#    the random walk
+#   the random walk
 for i in range(steps):
     for k in range(len(x)):
-        x[k] = x[k] + random.choice([-1.,1.]) # moves the position of the walker
-
+        # moves the position of the walker forwards or backwards
+        x[k] = x[k] + random.choice([-1.,1.]) 
 
 #    We want to represent the endpoints using circles with their 
 #    size proportional to the distance from the origin
 s = [0.5*abs(a) for a in x]  # distance from origin of each point
 s = [a / max(s) for a in s]  # scales the sizes for visual clarity
 
-# set color based on size
-colors = [cm.winter(color) for color in s]  # creates a colormap based on the size
+# create colormap based on size
+colors = [cm.winter(color) for color in s]  
 
 # create a new figure
 plt.figure()
