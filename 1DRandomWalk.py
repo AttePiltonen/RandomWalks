@@ -35,9 +35,9 @@ for a, color, size in zip(x, colors, s):
     ax.add_artist(circle)
 
 # limits for the x axis to ensure all points are visible
-minxy = 1.2*min(min(x), min(y))
-maxxy = 1.2*max(max(x), max(y))
-plt.xlim([minxy, maxxy])
+minx = 1.2*min(x)
+maxx = 1.2*max(x)
+plt.xlim([minx, maxx])
 plt.ylim([-2,2])
 
 # prints the end positions after the random walks
